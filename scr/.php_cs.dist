@@ -8,12 +8,10 @@ $finder = PhpCsFixer\Finder::create()
         'node_modules',
         'vendor',
         'public',
-        'resources/docs'
     ])
     ->name('*.php')
     ->notName('*.blade.php')
     ->notPath('_ide_helper.php')
-    ->notPath('sketch.php')
     ->ignoreDotFiles(true)
 ;
 
