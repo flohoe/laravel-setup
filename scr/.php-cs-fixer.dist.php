@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
     ->exclude([
@@ -15,8 +17,8 @@ $finder = PhpCsFixer\Finder::create()
     ->ignoreDotFiles(true)
 ;
 
-return PhpCsFixer\Config::create()
-    ->setFinder($finder)
+$config = new PhpCsFixer\Config();
+$config
     ->setRiskyAllowed(true)
     ->setRules([
         '@PSR2' => true,
@@ -51,4 +53,7 @@ return PhpCsFixer\Config::create()
         // Logical NOT operators (!) should have one trailing whitespace.
         'not_operator_with_successor_space' => true,
     ])
+    ->setFinder($finder)
 ;
+
+return $config;
