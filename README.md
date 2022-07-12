@@ -10,5 +10,18 @@ wget https://raw.githubusercontent.com/flohoe/laravel-setup/master/scr/.php-cs-f
 ## IDE Helper
 
 ```console
-wget https://raw.githubusercontent.com/flohoe/laravel-setup/master/scr/_ide_helper.php -O _ide_helper.php
+composer require --dev barryvdh/laravel-ide-helper
+
+php artisan ide-helper:generate
+php artisan ide-helper:meta
+php artisan ide-helper:models --nowrite
 ```
+
+
+## Static Code Analysis
+
+- php insights
+- larastan
+- Clockwork
+
+
